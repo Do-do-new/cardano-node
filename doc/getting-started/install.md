@@ -133,7 +133,7 @@ Change the working directory to the downloaded source code folder:
 Checkout the latest version of cardano-node (choose the tag with the highest version number: ``TAGGED-VERSION``):
 
     git fetch --all --recurse-submodules --tags
-    git tag
+    git for-each-ref --sort=creatordate --format '%(refname) %(creatordate)' refs/tags
     git checkout tags/<TAGGED VERSION>
 
 #### Configure the build options
@@ -150,7 +150,7 @@ Update the local project file to use the VRF library that you installed earlier.
 
 #### Build and install the node
 
-Build the node and CLI with `cabal`:
+Build the node and CLI with `cabal` (-j can be utilized to set number of threads):
 
     cabal build all
 
