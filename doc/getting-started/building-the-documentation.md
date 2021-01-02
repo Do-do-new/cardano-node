@@ -13,14 +13,13 @@ pip3 install sphinx-rtd-theme
 pip3 install recommonmark
 pip3 install sphinx_markdown_tables --user
 pip3 install sphinxemoji --user
-cd doc
-sphinx-build -b html . builddir
 ```
 
 ## Building documentation
 
 ```bash
-sphinx-build doc html
+cd doc
+sphinx-build -b html . builddir
 ```
 
 Open the documentation at `html/index.html`
